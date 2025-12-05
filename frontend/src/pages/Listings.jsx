@@ -4,7 +4,7 @@ import axios from 'axios'
 export default function Listings(){
   const [listings, setListings] = useState([])
   useEffect(()=>{
-    axios.get((import.meta.env.VITE_API_URL||'http://localhost:4000') + '/listings').then(r=>setListings(r.data)).catch(()=>{})
+    axios.get((import.meta.env.VITE_API_URL ||'http://localhost:4000') + ':4000/listings').then(r=>setListings(r.data)).catch(()=>{})
   },[])
   return (
     <div>
