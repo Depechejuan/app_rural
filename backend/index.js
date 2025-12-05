@@ -10,10 +10,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const pass = "root0000"
+
 const pool = new Pool({
   host: process.env.PG_HOST || 'appreactbd.cn8oio0gkdwh.us-east-1.rds.amazonaws.com',
   user: process.env.PG_USER || 'ruraluser',
-  password: process.env.PG_PASSWORD || 'root0000',
+  password: pass,
   database: process.env.PG_DATABASE || 'ruraldb',
   port: process.env.PG_PORT ? parseInt(process.env.PG_PORT) : 5432,
   ssl: {
@@ -110,4 +112,4 @@ app.post('/upload', upload.single('file'), (req,res)=>{
 });
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, ()=> console.log('Backend listening on', PORT, " | ", pool.password, ));
+app.listen(PORT, ()=> console.log('Backend listening on', PORT, " | ", pool, ));
