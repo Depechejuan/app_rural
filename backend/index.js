@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const pool = new Pool({
-  host: process.env.PG_HOST || 'localhost',
+  host: process.env.PG_HOST || 'appreactbd.cn8oio0gkdwh.us-east-1.rds.amazonaws.com',
   user: process.env.PG_USER || 'ruraluser',
   password: process.env.PG_PASSWORD || 'postgres',
   database: process.env.PG_DATABASE || 'ruraldb',
