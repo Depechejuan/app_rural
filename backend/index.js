@@ -20,6 +20,7 @@ const pool = new Pool({
   }
 });
 
+
 const JWT_SECRET = process.env.JWT_SECRET || 'devsecret';
 
 app.get('/health', (req,res)=>res.json({ok:true}));
@@ -108,4 +109,4 @@ app.post('/upload', upload.single('file'), (req,res)=>{
 });
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, ()=> console.log('Backend listening on', PORT));
+app.listen(PORT, ()=> console.log('Backend listening on', PORT, "/n ", pool));
