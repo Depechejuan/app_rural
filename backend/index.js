@@ -4,6 +4,7 @@ const { Pool } = require('pg');
 const multer = require('multer');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const fs = require("fs");
 
 const app = express();
 app.use(cors());
