@@ -17,7 +17,7 @@ const pool = new Pool({
   database: process.env.PG_DATABASE || 'ruraldb',
   port: process.env.PG_PORT ? parseInt(process.env.PG_PORT) : 5432,
   ssl: {
-    ca: fs.readFileSync("/ruta/al/cert/rds-combined-ca-bundle.pem").toString(),
+    rejectUnauthorized: false
   }
 });
 
