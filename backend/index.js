@@ -13,7 +13,7 @@ app.use(express.json());
 const pass = "root0000"
 
 const pool = new Pool({
-  host: process.env.PG_HOST || 'appreactbd.cn8oio0gkdwh.us-east-1.rds.amazonaws.com',
+  host: process.env.PG_HOST || 'dataappreactbd.cn8oio0gkdwh.us-east-1.rds.amazonaws.com',
   user: process.env.PG_USER || 'ruraluser',
   password: pass,
   database: process.env.PG_DATABASE || 'ruraldb',
