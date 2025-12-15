@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const pass = "root0000"
+const pass = "postgres"
 
 const pool = new Pool({
   host: process.env.PG_HOST || 'dataappreactbd.cn8oio0gkdwh.us-east-1.rds.amazonaws.com',
